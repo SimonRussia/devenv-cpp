@@ -30,6 +30,7 @@ antigen theme https://github.com/denysdovhan/spaceship-prompt spaceship
 
 antigen apply
 
+bindkey -v
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 HISTORY_SUBSTRING_SEARCH_ENSURE_UNIQUE=1
