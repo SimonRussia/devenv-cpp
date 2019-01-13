@@ -297,15 +297,6 @@ nnoremap g. :normal! `[v`]<cr><left>
 xnoremap <  <gv
 xnoremap >  >gv
 
-if exists(":Tabularize")
-  nmap <Leader>a= :Tabularize /=<CR>
-  vmap <Leader>a= :Tabularize /=<CR>
-  nmap <Leader>a\| :Tabularize /\|<CR>
-  vmap <Leader>a\| :Tabularize /\|<CR>
-  nmap <Leader>a: :Tabularize /:\zs<CR>
-  vmap <Leader>a: :Tabularize /:\zs<CR>
-endif
-
 vnoremap  <Leader>y  "+y
 nnoremap  <Leader>Y  "+yg_
 nnoremap  <Leader>y  "+y
@@ -316,15 +307,13 @@ nnoremap <Leader>P "+P
 vnoremap <Leader>p "+p
 vnoremap <Leader>P "+P
 
+call deoplete#custom#option('smart_case', v:true)
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+
 let g:UltiSnipsEditSplit = "vertical"
 let g:UltiSnipsExpandTrigger = "<C-k>"
 let g:UltiSnipsJumpBackwardTrigger = "<C-p>"
 let g:UltiSnipsJumpForwardTrigger = "<C-n>"
-
-let g:ycm_semantic_triggers = {
-\   'cpp': [ 're!.' ],
-\   'c++': [ 're!.' ]
-\ }
 
 " checks
 
